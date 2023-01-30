@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:wordle/wordle/wordle.dart';
+
+import '../data/word_list.dart';
 
 enum GameStatus { playing, submitting, lost, won }
 
@@ -27,6 +31,23 @@ class _WordleScreenState extends State<WordleScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text(
+          'WORDLE',
+          style: TextStyle(
+            fontSize: 36,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 4,
+          ),
+        ),
+      ),
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Board(board: _board)
+      ]),
+    );
   }
 }
