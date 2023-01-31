@@ -25,6 +25,9 @@ class Word extends Equatable {
     }
   }
 
+
   @override
   List<Object?> get props => [letters];
+
+  static Word? of(Word solution) {}
 }
