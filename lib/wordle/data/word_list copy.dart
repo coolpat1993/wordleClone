@@ -1,7 +1,3 @@
-const List<String> fiveLetterWords = [
-  "ffott"
-];
-
 const List<String> fiveLetterWordsDictionary = [
   "aahed",
   "aalii",
